@@ -1,2 +1,2 @@
 # primer-cssgrid
-Este sera mi primer proyecto en ccs grid
+Este sera mi primer proyecto en css grid
