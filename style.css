@@ -7,49 +7,61 @@ main {
       margin: 0 auto;
 }
 body {
-      background-color: rgb(200, 225, 247);
+      background-color: rgb(39, 39, 39);
 }
 .hero {
       display: grid;
-      grid-template-columns: 2fr 3fr;
-      grid-auto-flow: 400px;
-      gap: 25px;
+      grid-template-columns: 2fr minmax(250px,3fr) ;
+      grid-auto-rows: 550px;
+      border-bottom: 1px solid #ddd;
 
 }
 .hero-image {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      gap: 25px;
+      margin: 0;
 }
 .info {
       align-self: center;
 }
 .info-title {
-      color: #333;
-      font-size: 3rem;
-      font-weight: bolder;
+      color: rgb(137, 245, 245);
+      font-size: 4rem;
+      font-weight: 900;
       margin-bottom: 24px;
 }
 .info-subtitle {
-      color: #333;
+      color: rgb(137, 245, 245);
       font-size: 1.5rem;
       margin-bottom: 24px;
 }
 .info-button {
       border: none;
       border-radius: 20px;
-      color: #333;
-      background-color: #fb8c00;
+      color: rgb(255, 255, 255);
+      background-color: rgb(53, 90, 238);
       font-weight: bolder;
       padding: 12px 24px;
 }
+/* second section*/
 .Chalecos {
+      margin: 0;
+}
+.Chalecos-title{
+      color: rgb(137, 245, 245);
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 50px;
+      font-size:2rem ;
+}
+.Chalecos-grid {
       display: grid;
-      grid-template-columns: repeat(4,minmax(250px,500px));
-      grid-auto-rows: 250px;
-      gap: 25px;
+      grid-template-columns: repeat(4,minmax(150px, 250px));
+      grid-auto-rows: 1fr;
+      gap:25px;
       justify-content: center;
+   
 }
 .dishes-item {
       width: 100%;
@@ -60,4 +72,52 @@ body {
     grid-area: 1 / 1 / 3 / 3;
     width: 100%;
     height: 100%;
+    object-fit:cover ;
 }
+.menu {
+      margin-bottom:200px ;
+}
+.menu-title {
+      font-size: 2rem;
+      color: rgb(137, 245, 245);
+      font-weight: bolder;
+      text-align: center;
+      margin-bottom:50px ;
+}
+.menu-grid-item {
+      background-color: rgb(137, 245, 245);
+      padding: 15px;
+      border-top-left-radius: 40px;
+
+}
+.menu-grid{
+      display: grid;
+      gap: 25px;
+      justify-content: center;
+      grid-template-columns: repeat(3,minmax(100px,250px));
+}
+.menu-grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+}
+@media screen and (max-width:1024px) {
+      .info-title{
+            font-size: 2.5rem;
+      }            
+}
+@media screen and (max-width:768px) {
+      .hero {
+            grid-template-columns: 1fr;
+            padding-bottom: 50px;   
+      }
+
+      .hero-image {
+            display: none;
+      }
+      .dishes {
+            grid-template-columns: repeat(auto-fit,minmax(135px,1fr));
+            grid-template-rows: repeat(2,minmax(135px,1fr));
+      }
+}
+
